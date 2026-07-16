@@ -1,0 +1,13 @@
+/* background.css — superficie detrás de la hoja + profundidad para el efecto flotante */
+body{
+  /* superficie neutra con una leve profundidad para que la hoja "flote" encima */
+  background:
+    radial-gradient(120% 80% at 50% -10%, #efeade 0%, #e6dfcf 45%, #ddd4c0 100%);
+  min-height:100vh;
+}
+
+/* Accesibilidad: sin movimiento si el sistema lo pide */
+@media(prefers-reduced-motion:reduce){
+  .paper{animation:none !important;}
+  .publi{animation:none !important;}
+}

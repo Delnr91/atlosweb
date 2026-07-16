@@ -1,0 +1,31 @@
+/* reset.css — base mínima + paleta vintage disciplinada */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+img,svg,video{display:block;max-width:100%;}
+button,input{font:inherit;color:inherit;}
+a{color:inherit;}
+
+:root{
+  /* Fondo: papel crema / marfil (nunca blanco puro) */
+  --paper:#FBF9F5;
+  --paper-2:#F4F1EA;
+  /* Tinta: gris muy oscuro, no negro puro */
+  --ink:#1A1A1A;
+  --ink-soft:#463d30;
+  --muted:#6f6455;      /* etiquetas, mono, texto secundario */
+  --line:#ddd6c8;       /* filetes y bordes cálidos */
+  /* Único acento llamativo: rojo editorial. SOLO en botones de acción. */
+  --accent:#B0231F;
+  --accent-dark:#8c1a17;
+
+  /* Alias heredados → mapeados a la paleta disciplinada (sin teal) */
+  --sepia:var(--muted);
+  --oxblood:var(--ink);
+  --glow:var(--muted);
+  --gold:#8c7a5a;
+
+  --mono:'Space Mono',ui-monospace,monospace;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --old:'IM Fell English',Georgia,serif;
+}
+.ic{display:inline-block;vertical-align:middle;color:currentColor;}

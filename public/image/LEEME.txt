@@ -1,0 +1,7 @@
+Pon aquí tu imagen de fondo del DIARIO con el nombre EXACTO:
+
+  diario-bg.jpg   (o .png)
+
+Se usa SOLO como fondo de la hoja del periódico (.paper), no en toda la web.
+Recomendado: una textura de papel envejecido, tono claro, que se pueda repetir
+(seamless) para que se vea bien sin importar el largo de la página.

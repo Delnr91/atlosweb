@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ATLOS — El Diario Inteligente</title>
+<meta name="description" content="Atlos: la inteligencia artificial que filtra el ruido del mundo y te entrega solo lo que importa. En Telegram." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="paper">
+
+    <div class="tagline">Todas las noticias del mundo — filtradas por inteligencia artificial</div>
+
+    <header class="masthead">
+      <h1 class="brand-logo"><img src="/image/logo.png" alt="Atlos — El Diario Inteligente" /></h1>
+      <div class="sub">"El Diario Inteligente que piensa por ti"</div>
+    </header>
+
+    <div class="dateline">
+      <span class="live"><span class="dot"></span> Prensa en marcha</span>
+      <span id="edition-date">12 de Enero de 2050</span>
+      <span>Vol. I · N.º 1 · <span id="clock">--:--:-- UTC</span></span>
+    </div>
+
+    <nav class="nav">
+      <a href="#portada">Portada</a>
+      <a href="#suscripcion">Suscripción</a>
+      <a href="#consultas">Consultas</a>
+      <a class="ext" href="/terms.html">Términos</a>
+    </nav>
+
+    <section class="lede" id="portada">
+      <h2>La inteligencia que filtra el ruido del mundo</h2>
+      <div class="deck">Un enjambre de agentes de IA escanea el planeta cada hora, descarta el clickbait y entrega solo lo que importa: redactado, analizado y listo para decidir.</div>
+    </section>
+
+    <!-- Figura central = VIDEO (único con scroll) -->
+    <figure class="figure" data-scrollytelling>
+      <div class="figure__stack">
+        <video class="figure__v" muted loop playsinline preload="metadata"><source src="/videos/news-1.mp4" type="video/mp4" /></video>
+        <video class="figure__v" muted loop playsinline preload="metadata"><source src="/videos/news-2.mp4" type="video/mp4" /></video>
+        <video class="figure__v" muted loop playsinline preload="metadata"><source src="/videos/news-3.mp4" type="video/mp4" /></video>
+        <video class="figure__v" muted loop playsinline preload="metadata"><source src="/videos/news-4.mp4" type="video/mp4" /></video>
+        <div class="figure__bar"><i></i></div>
+      </div>
+      <figcaption class="figure__cap" id="fig-cap">Atlos escanea más de 35 fuentes globales cada hora, sin descanso.</figcaption>
+    </figure>
+
+    <!-- Manifiesto & Suscripción (2 columnas) -->
+    <div class="body2">
+      <div class="colx" id="manifiesto">
+        <div class="col-h">¿Qué es Atlos?</div>
+        <div class="prose">
+          <p>Atlos es un asistente de noticias en Telegram con arquitectura multi-agente de inteligencia artificial. Un núcleo central procesa el mundo una sola vez por ciclo y reparte a cada lector únicamente lo relevante para su vida.</p>
+          <p>Finanzas, tecnología, deportes, ciencia, salud y cultura, filtrados por tus intereses y depurados de sensacionalismo. Y si ocurre algo crítico, el Oráculo de Pánico Global te avisa en tiempo real.</p>
+          <p>Menos ruido, más señal. Estar informado nunca fue tan silencioso.</p>
+        </div>
+
+        <figure class="figure-inline">
+          <div class="figure-inline__img"></div>
+          <figcaption>La inteligencia de Atlos, ilustrada al estilo de los grabados de antaño.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Aviso: imagen vintage (marco) + texto superpuesto, todo clickeable → Telegram -->
+      <div class="colx" id="suscripcion">
+        <a class="publi" href="https://t.me/SoyAtlos_bot" target="_blank" rel="noopener"
+           aria-label="Suscríbete a Atlos por $0.10 al día — entrar al diario en Telegram">
+          <img class="publi__img" src="/image/publi.png"
+               alt="Aviso Atlos — Infórmese por solo $0.10 al día. Entrar al diario en Telegram." />
+          <span class="publi__quote">La información que necesitas, resumida y directa a tu Telegram — por lo que cuesta una moneda suelta <b>($3/mes)</b>.</span>
+          <span class="publi__cta">Entrar al diario en Telegram ☞</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Consultas (chat con fondo de máquina de escribir) -->
+    <section id="consultas" style="padding:32px 0 6px; border-top:3px double var(--ink); margin-top:10px;">
+      <div class="col-h" style="max-width:640px;margin:0 auto 14px;">Oficina de Consultas</div>
+      <div class="chat">
+        <div class="chat__head">
+          <i data-icon="typewriter" data-size="18"></i>
+          <span>Terminal de Atlos</span>
+          <span class="chat__status"><span class="dot"></span> en línea</span>
+        </div>
+        <div class="chat__stage">
+          <video class="chat__bg" autoplay muted loop playsinline preload="auto"><source src="/videos/Typewriter.mp4" type="video/mp4" /></video>
+          <div id="chat-log" class="chat__log" aria-live="polite"></div>
+        </div>
+        <div id="chat-chips" class="chat__chips"></div>
+        <form id="chat-form" class="chat__form" autocomplete="off">
+          <input id="chat-input" class="chat__input" type="text" placeholder="Escribe tu pregunta…" maxlength="200" />
+          <button class="chat__send" type="submit" aria-label="Enviar"><i data-icon="send" data-size="18"></i></button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="orn">❦ ❖ ❦</div>
+      <div class="seal"><img src="/image/logo.png" alt="Atlos" /></div>
+      <p class="fine">Publicado por la redacción autónoma de Atlos, MMXXVI. Todos los agentes son artificiales; toda la utilidad es real.</p>
+      <p class="fine" style="margin-top:2px;">Desarrollado por <a href="https://lattices.cl" target="_blank" rel="noopener" style="text-decoration:underline;color:inherit;">Lattices Start up</a> ☂️ 💙</p>
+      <div class="foot-links">
+        <a href="/terms.html">Términos y Privacidad</a> &nbsp;·&nbsp;
+        <a href="https://t.me/SoyAtlos_bot" target="_blank" rel="noopener">Abrir el bot</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

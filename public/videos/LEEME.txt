@@ -1,0 +1,9 @@
+Coloca aquí tus 4 videos generados con IA, con estos nombres EXACTOS:
+
+  news-1.mp4   → "Escanea el mundo"
+  news-2.mp4   → "Filtra el ruido"
+  news-3.mp4   → "Analiza y redacta"
+  news-4.mp4   → "Te lo entrega"
+
+Formato recomendado: MP4 (H.264), 16:9, 1920x1080, 5-8 seg, en bucle.
+Mientras no estén, la sección muestra un fondo vintage con los titulares (fallback).
