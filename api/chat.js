@@ -70,6 +70,17 @@ export default async function handler(req, res) {
     return;
   }
 
+  // Anti-abuso: solo aceptamos peticiones nacidas en NUESTRA web (mismo host).
+  // Bloquea curl/bots/otros sitios que quieran quemar la cuota de Groq.
+  const origin = String(req.headers.origin || '');
+  const host = String(req.headers.host || '');
+  let sameOrigin = false;
+  try { sameOrigin = origin !== '' && new URL(origin).host === host; } catch (_) { /* origin malformado */ }
+  if (!sameOrigin) {
+    res.status(403).json({ error: 'forbidden', reply: null });
+    return;
+  }
+
   const ct = String(req.headers['content-type'] || '');
   if (!ct.includes('application/json')) {
     res.status(415).json({ error: 'unsupported_media_type' });
